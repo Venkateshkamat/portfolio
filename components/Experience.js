@@ -82,7 +82,7 @@ const Experience = () => {
           <a
             className="inline-flex items-center font-medium leading-tight text-slate-200 group"
             aria-label="View Full Résumé (opens in a new tab)"
-            href="/resume.pdf"
+            href={`${process.env.NODE_ENV === 'production' ? '/portfolio' : ''}/resume.pdf`}
             target="_blank"
             rel="noreferrer noopener"
           >

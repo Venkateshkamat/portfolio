@@ -27,7 +27,7 @@ const LeftSidebar = ({ activeSection }) => {
         <p className="mt-4 max-w-xs leading-normal">
           I build exceptional digital experiences with modern web technologies and clean, efficient code.
         </p>
-        
+
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
           <ul role="list" className="mt-16 w-max">
             {navigation.map((item) => (
@@ -41,16 +41,14 @@ const LeftSidebar = ({ activeSection }) => {
                   }}
                 >
                   <span
-                    className={`nav-line ${
-                      activeSection === item.href.slice(1)
+                    className={`nav-line ${activeSection === item.href.slice(1)
                         ? 'w-16 bg-slate-200'
                         : 'w-8 bg-slate-600'
-                    }`}
+                      }`}
                   ></span>
                   <span
-                    className={`nav-text ${
-                      activeSection === item.href.slice(1) ? 'text-slate-100' : 'text-slate-500'
-                    }`}
+                    className={`nav-text ${activeSection === item.href.slice(1) ? 'text-slate-100' : 'text-slate-500'
+                      }`}
                   >
                     {item.name}
                   </span>
@@ -60,7 +58,7 @@ const LeftSidebar = ({ activeSection }) => {
           </ul>
         </nav>
       </div>
-      
+
       <ul role="list" className="ml-1 mt-8 flex items-center" aria-label="Social media">
         <li className="mr-5 text-xs shrink-0">
           <a
@@ -93,10 +91,12 @@ const LeftSidebar = ({ activeSection }) => {
             <Mail className="h-6 w-6" />
           </a>
         </li>
-                <li className="mr-5 text-xs shrink-0">
+        <li className="mr-5 text-xs shrink-0">
           <a
             className="block hover:text-slate-200 transition-colors"
             href="https://leetcode.com/u/venkateshkamat/"
+            target='_blank'
+            rel="noreferrer noopener"
             aria-label="Email"
           >
             <CodeXml className="h-6 w-6" />
