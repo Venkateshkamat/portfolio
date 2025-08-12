@@ -6,8 +6,8 @@ const Projects = () => {
     {
       title: 'Chat-app',
       description: 'Built a real-time chat application using the MERN stack and Socket.io for instant messaging. Implemented user authentication, dynamic conversations, image uploads, and a responsive UI for a seamless experience.',
-      image:'/chatapp.png',
-      technologies: ['Socket.io','React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Zustand', 'CI/CD'],
+      image: '/chatapp.png',
+      technologies: ['Socket.io', 'React', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Zustand', 'CI/CD'],
       githubLink: 'https://github.com/Venkateshkamat/ChatApp',
       liveLink: 'https://chatapp-xlyo.onrender.com/',
       featured: true
@@ -15,7 +15,7 @@ const Projects = () => {
     {
       title: 'Auctx',
       description: 'Developed a decentralized auction platform with secure Ethereum-based transactions via Solidity smart contracts. Designed scalable data architectures using MySQL, MongoDB, and AWS services (RDS, DynamoDB, Redis, Memcached) for performance optimization.',
-      image:'/auctx.png',
+      image: '/auctx.png',
       technologies: ['Python', 'Web3.py', 'Reactjs', 'PostgreSQL'],
       githubLink: 'https://github.com/venkateshkamat/',
       liveLink: 'https://github.com/venkateshkamat/',
@@ -24,7 +24,7 @@ const Projects = () => {
     {
       title: 'Pokedex',
       description: 'This project is a simple implementation of Pokemon API',
-      image:'/pokedex.png',
+      image: '/pokedex.png',
       technologies: ['Reactjs', 'PokeAPI', 'CSS Flex Box'],
       githubLink: 'https://github.com/Venkateshkamat/Pokedex',
       liveLink: 'https://github.com/Venkateshkamat/Pokedex',
@@ -33,7 +33,7 @@ const Projects = () => {
     {
       title: 'Portfolio Website',
       description: 'A personal portfolio website showcasing projects and skills with smooth animations and responsive design.',
-      image:'/portfolio.png',
+      image: '/portfolio.png',
       technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
       githubLink: 'https://github.com/yourusername/portfolio',
       liveLink: 'https://yourportfolio.vercel.app',
@@ -42,7 +42,7 @@ const Projects = () => {
     {
       title: 'Portfolio Website',
       description: 'A personal portfolio website showcasing projects and skills with smooth animations and responsive design.',
-      image:'/portfolio.png',
+      image: '/portfolio.png',
       technologies: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
       githubLink: 'https://github.com/yourusername/portfolio',
       liveLink: 'https://yourportfolio.vercel.app',
@@ -56,7 +56,7 @@ const Projects = () => {
   return (
     <section id="projects" className="section" aria-label="Selected projects">
       <div className="section-heading">Projects</div>
-      
+
       <div>
         {/* Featured Projects */}
         <ul className="group/list">
@@ -64,7 +64,7 @@ const Projects = () => {
             <li key={index} className="mb-12">
               <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                
+
                 <div className="z-10 sm:order-2 sm:col-span-6">
                   <h3>
                     <a
@@ -81,9 +81,9 @@ const Projects = () => {
                       </span>
                     </a>
                   </h3>
-                  
+
                   <p className="mt-2 text-sm leading-normal">{project.description}</p>
-                  
+
                   <div className="mt-2 flex items-center gap-4">
                     {project.githubLink && (
                       <a
@@ -108,7 +108,7 @@ const Projects = () => {
                       </a>
                     )}
                   </div>
-                  
+
                   <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
                     {project.technologies.map((tech, techIndex) => (
                       <li key={techIndex} className="mr-1.5 mt-2">
@@ -119,15 +119,15 @@ const Projects = () => {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="z-10 sm:order-1 sm:col-span-2">
                   <div className="relative">
                     <div className="h-20 w-full rounded border-2 border-slate-200/10 bg-slate-700/50 sm:h-28">
-                    <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    />
+                      <Image
+                        src={`${process.env.NODE_ENV === 'production' ? '/portfolio' : ''}${project.image}`}
+                        alt={project.title}
+                        fill
+                      />
                     </div>
                   </div>
                 </div>
@@ -135,11 +135,11 @@ const Projects = () => {
             </li>
           ))}
         </ul>
-        
+
         {/* Other Notable Projects */}
         <div className="mt-12">
           <h3 className="mb-8 text-lg font-medium text-slate-200">Other Noteworthy Projects</h3>
-          
+
           <ul className="group/list grid grid-cols-1 gap-4 sm:grid-cols-2">
             {otherProjects.map((project, index) => (
               <li key={index} className="group">
@@ -171,9 +171,9 @@ const Projects = () => {
                       )}
                     </div>
                   </div>
-                  
+
                   <p className="mt-2 text-sm text-slate-400">{project.description}</p>
-                  
+
                   <ul className="mt-4 flex flex-wrap" aria-label="Technologies used">
                     {project.technologies.map((tech, techIndex) => (
                       <li key={techIndex} className="mr-1.5 mt-1">
@@ -188,7 +188,7 @@ const Projects = () => {
             ))}
           </ul>
         </div>
-        
+
         <div className="mt-12">
           <a
             className="inline-flex items-center font-medium leading-tight text-slate-200 group"
