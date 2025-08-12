@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react'
+import { Github, Linkedin, Mail, ExternalLink, CodeXml } from 'lucide-react'
 import Link from 'next/link'
 
 const LeftSidebar = ({ activeSection }) => {
@@ -49,7 +49,7 @@ const LeftSidebar = ({ activeSection }) => {
                   ></span>
                   <span
                     className={`nav-text ${
-                      activeSection === item.href.slice(1) ? 'text-slate-200' : 'text-slate-500'
+                      activeSection === item.href.slice(1) ? 'text-slate-100' : 'text-slate-500'
                     }`}
                   >
                     {item.name}
@@ -91,6 +91,15 @@ const LeftSidebar = ({ activeSection }) => {
             aria-label="Email"
           >
             <Mail className="h-6 w-6" />
+          </a>
+        </li>
+                <li className="mr-5 text-xs shrink-0">
+          <a
+            className="block hover:text-slate-200 transition-colors"
+            href="https://leetcode.com/u/venkateshkamat/"
+            aria-label="Email"
+          >
+            <CodeXml className="h-6 w-6" />
           </a>
         </li>
       </ul>

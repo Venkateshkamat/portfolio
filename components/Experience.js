@@ -31,7 +31,6 @@ const Experience = () => {
   return (
     <section id="experience" className="section" aria-label="Work experience">
       <div className="section-heading">Experience</div>
-      
       <div>
         <ol className="group/list">
           {experiences.map((exp, index) => (
@@ -55,7 +54,7 @@ const Experience = () => {
                       >
                         <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                         <span>
-                          {exp.position} · {exp.company}
+                          <p>{exp.position}</p> <span className='font-light text-sm'>{exp.company}</span>
                           <ExternalLink className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true" />
                         </span>
                       </a>

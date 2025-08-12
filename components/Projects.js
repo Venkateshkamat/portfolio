@@ -25,7 +25,7 @@ const Projects = () => {
       title: 'Pokedex',
       description: 'This project is a simple implementation of Pokemon API',
       image:'/pokedex.png',
-      technologies: ['React', 'Chart.js', 'OpenWeather API', 'CSS Grid'],
+      technologies: ['Reactjs', 'PokeAPI', 'CSS Flex Box'],
       githubLink: 'https://github.com/Venkateshkamat/Pokedex',
       liveLink: 'https://github.com/Venkateshkamat/Pokedex',
       featured: true
