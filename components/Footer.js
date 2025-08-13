@@ -1,4 +1,4 @@
-import { HandMetal, Heart, Star } from "lucide-react"
+import { Heart } from "lucide-react"
 
 const Footer = () =>{
 

@@ -74,7 +74,6 @@ const Projects = () => {
                       rel="noreferrer noopener"
                       aria-label={`${project.title} (opens in a new tab)`}
                     >
-                      <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                       <span>
                         {project.title}
                         <ExternalLink className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true" />
@@ -122,13 +121,15 @@ const Projects = () => {
 
                 <div className="z-10 sm:order-1 sm:col-span-2">
                   <div className="relative">
-                    <div className="h-20 w-full rounded border-2 border-slate-200/10 bg-slate-700/50 sm:h-28">
-                      <Image
-                        src={`${process.env.NODE_ENV === 'production' ? '/portfolio' : ''}${project.image}`}
-                        alt={project.title}
-                        fill
-                      />
-                    </div>
+<div className="relative aspect-[16/9] w-full rounded border-2 border-slate-200/10 bg-slate-700/50">
+  <Image
+    src={`${process.env.NODE_ENV === 'production' ? '/portfolio' : ''}${project.image}`}
+    alt={project.title}
+    fill
+    className="object-cover rounded"
+  />
+</div>
+
                   </div>
                 </div>
               </div>
